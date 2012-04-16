@@ -1,1 +1,3 @@
-http://hobbyrobotyka.pl/2010/07/serwa-modelarskie-w-robotyce/
+Przydatne Linki
+*[http://hobbyrobotyka.pl/2010/07/serwa-modelarskie-w-robotyce Serwa Modelarskie]
+*[http://code.google.com/p/support/wiki/WikiSyntax#HTML_support Wiki Pomoc]

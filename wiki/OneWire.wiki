@@ -1,0 +1,34 @@
+#summary Interfejs 1-Wire
+#labels Phase-Implementation
+
+= Wstęp =
+
+Interfejs *1-Wire* został opracowany przez firmę Dallas Semiconductors, jest on przeznaczony do przesylania informacji pomiedzy ukladem nadrzednym master(mk) i ukladami podrzednymi slave.
+
+Transmisja odbywa sie w obu kierunkach z wykorzystaniem jednego przewodu sygnalowego (oprocz masy), ktory jednoczesnie moze byc wykorzystywany do zasilania ukladow do niego podlaczonych. Dane przesylane sa z predkoscia do 16,3 kbps w trybie standard oraz do 115 kbps w trybie overdrive.
+
+=Podłączenie=
+Kazde z urzadzen podlaczonych do magistrali musi miec wyjscie typu otwarty dren, a linia sygnalowa DQ jest podlaczona do zasilania przez rezystor podciagajacy o wartosci okolo 5kOmow. Zatem w stanie bezczynnosci linia DQ jest w stanie wysokim. Magistrala nie ma ustalonego formatu danych, sposob przesylania informacji zalezy od konfiguracji ukladow podrzednych. Zawsze jednak jako pierwszy jest przesylany najmniej znaczacy bit.
+
+===Numer identyfikacyjny===
+Kazde z urzadzen typu slave posiada unikalny 64-bitowy numer identyfikacyjny, zawarty w pamieci ROM. Dzieki temu do jednej lini danych moze byc podpietych wiele urzadzen.
+
+Numer identyfikacyjny zawiera sume kontrolna CRC – 8 bitow, numer seryjny – 48 bitow oraz typ urzadzenia – 8 bitow. 
+
+=Transmisja=
+Protokol wymiany danych sklada sie z czterech sekwencji inicjowanych przez uklad master:
+  *	Inicjalizacja
+  *	Wysylanie zera
+  *	Wysylanie jedynki
+  *	Odczyt bita z ukladu podrzednego
+
+===Inicjalizacja===
+Sekwencja inicjalizacji rozpoczyna się wysłaniem na magistralę przez układ master (mk) impulsu zerującego o czasie trwania 480 .. 960ms. Po tym czasie układ master przechodzi w stan odbioru i na magistrali pojawia się stan wysoki. Po zidentyfikowaniu końca impulsu zerującego układ slave odczekuje 15 .. 60ms i wystawia na magistralę impuls obecności (presence pulse) o czasie trwania 60 .. 240ms. Sekwencja inicjalizacji umożliwia układowi master wykrycie podłączonych do niej układów slave. Po czasie koniecznym do pełnej inicjalizacji układów podrzędnych możliwe staje się przeprowadzenie normalnej transmisji danych.
+
+===Wysylanie===
+  # Nadanie 0 polega na wygenerowaniu impulsu o czasie trwania 60 – 120 us . 
+  # Nadanie 1 polega na wygenerowaniu impulsu o czasie trwania 1- 15 us i odczekaniu minimum 60 us. 
+Przerwa miedzy bitami minimum 1us.
+
+===Odczyt===
+Odczyt wartości bita z układu podrzędnego polega na generacji przez układ master impulsu o czasie trwania minimum 1us (zazwyczaj stosuje się impulsy 3 .. 5us), a następnie na zwolnieniu linii DQ i sprawdzeniu jej stanu logicznego przed upływem 15us od rozpoczęcia sekwencji odczytu.

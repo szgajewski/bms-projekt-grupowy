@@ -1,4 +1,4 @@
-#summary Komunikacja z mikrokomputerem za pomocą Telnet oraz FTP.
+#summary Komunikacja z mikrokomputerem za pomocą Telnet, FTP oraz WWW.
 
 
 
@@ -34,4 +34,3 @@ a następnie hasło: *techbase*<br><br>
 = WWW =
 
 *port:* 2080<br>
-

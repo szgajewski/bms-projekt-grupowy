@@ -1,0 +1,37 @@
+#summary Komunikacja z mikrokomputerem za pomocą Telnet oraz FTP.
+
+
+
+==Adres serwera==
+
+tsunet.dyndns.org<br><br>
+
+= Telnet =
+
+=== Zalecane oprogramowanie ===
+[http://www.putty.org/ PuTTy]
+
+=== Dane dostępowe ===
+
+*port:* 2023<br>
+*login:* user<br>
+*hasło:* user<br>
+
+=== Uprawnienia roota ===
+Aby uzyskać uprawnienia roota, po zalogowaniu należy wpisać:<br>
+*su*<br>
+a następnie hasło: *techbase*<br><br>
+
+= FTP =
+
+=== Zalecane oprogramowanie ===
+[http://filezilla-project.org/ FileZilla]
+
+*port:* 2021<br>
+*user:* root<br>
+*hasło:* techbase<br><br>
+
+= WWW =
+
+*port:* 2080<br>
+

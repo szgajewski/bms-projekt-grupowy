@@ -27,6 +27,8 @@ a następnie hasło: *techbase*<br><br>
 === Zalecane oprogramowanie ===
 [http://filezilla-project.org/ FileZilla]
 
+
+=== Dane dostępowe ===
 *port:* 2021<br>
 *user:* root<br>
 *hasło:* techbase<br><br>

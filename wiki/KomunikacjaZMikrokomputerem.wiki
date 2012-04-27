@@ -20,7 +20,7 @@ tsunet.dyndns.org<br><br>
 === Uprawnienia roota ===
 Aby uzyskać uprawnienia roota, po zalogowaniu należy wpisać:<br>
 *su*<br>
-a następnie hasło: *techbase*<br><br>
+a następnie hasło roota<br><br>
 
 = FTP =
 
@@ -30,7 +30,7 @@ a następnie hasło: *techbase*<br><br>
 
 === Dane dostępowe ===
 *port:* 2021<br>
-*user:* root<br>
+*user:* root<br><br>
 
 
 = WWW =

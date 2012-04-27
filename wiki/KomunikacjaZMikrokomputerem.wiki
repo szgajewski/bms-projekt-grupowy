@@ -15,7 +15,7 @@ tsunet.dyndns.org<br><br>
 
 *port:* 2023<br>
 *login:* user<br>
-*hasło:* user<br>
+
 
 === Uprawnienia roota ===
 Aby uzyskać uprawnienia roota, po zalogowaniu należy wpisać:<br>
@@ -31,7 +31,7 @@ a następnie hasło: *techbase*<br><br>
 === Dane dostępowe ===
 *port:* 2021<br>
 *user:* root<br>
-*hasło:* techbase<br><br>
+
 
 = WWW =
 

@@ -20,7 +20,7 @@ tsunet.dyndns.org<br><br>
 === Uprawnienia roota ===
 Aby uzyskać uprawnienia roota, po zalogowaniu należy wpisać:<br>
 *su*<br>
-a następnie hasło roota<br><br>
+a następnie hasło roota.<br><br>
 
 = FTP =
 

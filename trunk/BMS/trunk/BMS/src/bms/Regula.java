@@ -11,26 +11,26 @@ package bms;
 public class Regula {
 
     private int funkcja, //wybor funkcji
-            co;          //wybor strefy
+            strefa;          //wybor strefy
     private float wartosc, //
             czas;        //dodatkowy parametr
 
-    public Regula(int funkcja, int co, float wartosc, float czas) {
+    public Regula(int funkcja, int strefa, float wartosc, float czas) {
         this.funkcja = funkcja;
-        this.co = co;
+        this.strefa = strefa;
         this.wartosc = wartosc;
         this.czas = czas;
     }
 
     public Regula() {
         this.funkcja = 0;
-        this.co = 0;
+        this.strefa = 0;
         this.wartosc = 0;
         this.czas = 0;
     }
 
-    public int getCo() {
-        return co;
+    public int getstrefa() {
+        return strefa;
     }
 
     public float getCzas() {

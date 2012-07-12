@@ -1,5 +1,7 @@
 package bms;
 
+import java.util.Timer;
+
 /**
  *
  * @author Michal
@@ -17,22 +19,10 @@ public class BMS {
     //zmienne do selectow
     public String tabela = "nazwa_tabeli";
     public String kolumna = "nazwa_kolumny";
+    private Timer t = new Timer();
 
     public BMS() {
-        DBConnection c = new DBConnection();
-        c.Connect(); //test połączenia
-
-        //c.Insert_Into_Czujniki(nazwa_cz);
-        //c.Insert_Into_Funkcje_P(nazwa_f);
-        //c.Insert_Into_Pomiary(id_pom, czas, wartosc);
-        //c.Insert_Into_Reguly(id_czuj, funkcja, wartosc, czas);
-
-        c.Select_All_From_Czujniki();
-        c.Select_All_From_Funkcje_P();
-        c.Select_All_From_Pomiary();   //-problem z timestamp()
-        c.Select_All_From_Reguly();
-
-        //c.Select_kolumna_From_tabela(kolumna,tabela);
+        t.scheduleAtFixedRate(new SD(), 1000, 60 * 1000);
     }
 
     /**
@@ -40,8 +30,5 @@ public class BMS {
      */
     public static void main(String[] args) {
         new BMS();
-        SD sd = new SD();
-        sd.run();
-
     }
 }

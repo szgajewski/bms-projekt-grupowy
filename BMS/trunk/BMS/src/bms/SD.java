@@ -15,7 +15,7 @@ import java.util.TimerTask;
 public class SD extends TimerTask {
 
     static int N = 3;
-    static float t = 15;
+    static float[] t;
 
     private static float gaussian(double b, double c, double x) {
         double a;
@@ -96,6 +96,12 @@ public class SD extends TimerTask {
         return 1 - f1;
     }
 
+    /**
+     * oczytuje reguly dotyczace danego czujnika
+     *
+     * @param czujnik
+     * @return
+     */
     private static Regula[] odczyt_z_bazy(int czujnik) {
         return DBConnection.Select_All_From_Reguly("id_czuj=" + String.valueOf(czujnik));
     }
@@ -146,15 +152,12 @@ public class SD extends TimerTask {
         Regula[] tmp;
         float tmp_f;
         int czuj = DBConnection.Select_All_From_Czujniki();
-        for (int i = 1; i <= czuj; i++) {
-            tmp = odczyt_z_bazy(i);
-            tmp_f = oblicz(tmp, t);
-            System.out.println(String.valueOf(t) + ": " + String.valueOf(tmp_f));
-            ustaw(i, tmp_f);
-        }
-        t += 0.5f;
-        if (t > 30) {
-            t = 10;
+        t = ModbusTCPConnection.read();
+        for (int i = 0; i < czuj - 1; i++) {
+            tmp = odczyt_z_bazy(i + 1);
+            tmp_f = oblicz(tmp, t[i]);
+            System.out.println(String.valueOf(t[i]) + ": " + String.valueOf(tmp_f));
+            ustaw(i + 1, tmp_f);
         }
     }
 }

@@ -4,6 +4,8 @@
  */
 package bms;
 
+import bms.DBConnection;
+import bms.Regula;
 import java.util.TimerTask;
 
 /**

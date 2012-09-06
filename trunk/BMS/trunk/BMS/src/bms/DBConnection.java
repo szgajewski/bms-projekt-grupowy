@@ -119,17 +119,17 @@ public class DBConnection {
         int i = 0;
         try {
             conn = (Connection) DriverManager.getConnection(url, username, password);
-            System.out.println("Start of DBConnection");
+//            System.out.println("Start of DBConnection");
             stat = (Statement) conn.createStatement();
             rs = stat.executeQuery("select * from czujniki;");
             while (rs.next()) {
-                System.out.println(rs.getString("id_cz") + " " + rs.getString("nazwa_cz"));
+//                System.out.println(rs.getString("id_cz") + " " + rs.getString("nazwa_cz"));
                 i++;
             }
             rs.close();
             stat.close();
             conn.close();
-            System.out.println("End of DBConnection");
+//            System.out.println("End of DBConnection");
 
         } catch (SQLException ex) {
             Logger.getLogger(DBConnection.class.getName()).log(Level.SEVERE, null, ex);
@@ -184,17 +184,17 @@ public class DBConnection {
 
         try {
             conn = (Connection) DriverManager.getConnection(url, username, password);
-            System.out.println("Start of DBConnection");
+//            System.out.println("Start of DBConnection");
             stat = (Statement) conn.createStatement();
             rs = stat.executeQuery("select * from reguly where " + where + ";");
             while (rs.next()) {
-                System.out.println(rs.getString("id_r") + " " + rs.getString("funkcja") + " " + rs.getString("id_czuj") + " " + rs.getString("wartosc") + " " + rs.getString("czas"));
+//                System.out.println(rs.getString("id_r") + " " + rs.getString("funkcja") + " " + rs.getString("id_czuj") + " " + rs.getString("wartosc") + " " + rs.getString("czas"));
                 reg.add(new Regula(rs.getInt("funkcja"), rs.getInt("id_czuj"), rs.getFloat("wartosc"), rs.getFloat("czas")));
             }
             rs.close();
             stat.close();
             conn.close();
-            System.out.println("End of DBConnection");
+//            System.out.println("End of DBConnection");
 
         } catch (SQLException ex) {
             Logger.getLogger(DBConnection.class.getName()).log(Level.SEVERE, null, ex);

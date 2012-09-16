@@ -115,6 +115,38 @@ public class DBConnection {
 
     }
 
+    public static void update_Temp_database(Float temp1, Float temp2) {
+
+        try {
+
+            conn = (Connection) DriverManager.getConnection(url, username, password);
+            System.out.println("Start of DBConnection");
+
+            stat = (Statement) conn.createStatement();
+
+            stat.executeUpdate("DELETE FROM  `temperatury` WHERE `id`='1'");
+            stat.executeUpdate("DELETE FROM  `temperatury` WHERE `id`='2'");
+
+            java.util.Date dt = new java.util.Date();
+
+            java.text.SimpleDateFormat sdf =
+                    new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+            String currentTime = sdf.format(dt);
+
+
+            stat.executeUpdate("INSERT INTO  `temperatury` (`id`,`wartosc`,`data`)VALUES ('1','" + temp1 + "','" + currentTime + "')");
+            stat.executeUpdate("INSERT INTO  `temperatury` (`id`,`wartosc`,`data`)VALUES ('2','" + temp2 + "','" + currentTime + "')");
+
+            stat.close();
+            conn.close();
+            System.out.println("End of DBConnection");
+        } catch (SQLException ex) {
+            Logger.getLogger(DBConnection.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }
+
     public static int Select_All_From_Czujniki() {
         int i = 0;
         try {

@@ -1,0 +1,31 @@
+#summary Opis systemu decyzyjnego
+
+= Wstęp =
+
+Zastosowano regułowo-rozmyty system decyzyjny.
+
+= Szczegóły =
+
+
+==Funkcje przynależności==
+
+Zastosowano 5 funkcji przynależności: 
+  * Zimno,
+  * Chłodno,
+  * Idealnie,
+  * Ciepło,
+  * Gorąco.
+
+Kształt funkcji przynależności zależy od trybu sterownia:
+  * w domyślnym trybie kształt funkcji determinowany jest przez wartość *temperatury idealnej* zapisanej w bazie danych. 
+  * w trybie lokalnym podstawowym kształt funkcji determinowany jest przez wartość *temperatury idealnej* ustawianej w interfejsie użytkownika.
+  * w trybie lokalnym zaawansowanym kształt funkcji ustawiany jest w całości w interfejsie użytkownika.
+
+
+==Reguły==
+
+Przyjęto stały zestaw reguł:
+  # gdy Zimno to Grzej,
+  # gdy Chłodno to Grzej,
+  # gdy Ciepło to Wietrz,
+  # gdy Gorąco to Wietrz.

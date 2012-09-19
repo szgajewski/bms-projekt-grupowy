@@ -4,10 +4,10 @@
 
 Zastosowano regułowo-rozmyty system decyzyjny.
 
-= Szczegóły =
 
 
-==Funkcje przynależności==
+
+=Funkcje przynależności=
 
 Zastosowano 5 funkcji przynależności: 
   * Zimno,
@@ -17,12 +17,38 @@ Zastosowano 5 funkcji przynależności:
   * Gorąco.
 
 Kształt funkcji przynależności zależy od trybu sterownia:
-  * w domyślnym trybie kształt funkcji determinowany jest przez wartość *temperatury idealnej* zapisanej w bazie danych. 
-  * w trybie lokalnym podstawowym kształt funkcji determinowany jest przez wartość *temperatury idealnej* ustawianej w interfejsie użytkownika.
+  * w domyślnym trybie kształt funkcji determinowany jest przez wartość _*temperatury idealnej*_ zapisanej w bazie danych. 
+  * w trybie lokalnym podstawowym kształt funkcji determinowany jest przez wartość _*temperatury idealnej*_ ustawianej w interfejsie użytkownika.
   * w trybie lokalnym zaawansowanym kształt funkcji ustawiany jest w całości w interfejsie użytkownika.
 
+===Tryby domyślny i lokalny podstawowy===
+W trybach domyślnym i lokalnym podstawowym wykorzystywane są funkcje w następującym kształcie:
+ * dla strefy 1.:
+   * funkcja Zimno - funkcja gaussowska o wartości średniej 10 i odchyleniu standardowym 4,
+   * funkcja Chłodno - funkcja gaussowska o wartości średniej _temperatura idealna-3_ i odchyleniu standardowym 3,
+   * funkcja Idealnie - funkcja gaussowska o wartości średniej _temperatura idealna_ i odchyleniu standardowym 1,
+   * funkcja Ciepło - funkcja gaussowska o wartości średniej _temperatura idealna+3_ i odchyleniu standardowym 3,
+   * funkcja Gorąco - funkcja gaussowska o wartości średniej 30 i odchyleniu standardowym 4,
+http://imageshack.us/a/img14/3676/gaussn.png
 
-==Reguły==
+  * dla strefy 2.:
+   * funkcja Zimno - funkcja Z o punktach w 10 i 20,
+   * funkcja Chłodno - funkcja trapezowa o punktach w 10, 15, _temperatura idealna-2_, _temperatura idealna+1_,
+   * funkcja Idealnie - funkcja trójkątna o punktach w _temperatura idealna-3_, _temperatura idealna_ i _temperatura idealna+3_,
+   * funkcja Ciepło - funkcja trapezowa o punktach w _temperatura idealna-1_, _temperatura idealna+2_, 25, 30,
+   * funkcja Gorąco - funkcja S o punktach w 25 i 30,
+
+|| *Nazwa funkcji* || *Punkt 1.* || *Punkt 2.* || *Punkt 3.* || *Punkt 4.* ||
+|| Zimno || 10 || 20 ||
+|| Chłodno || 10 || 15 || _temp-2_ || _temp+1_ ||
+|| Idealnie || _temp-3_ || _temp_ || _temp+3_ ||
+|| Ciepło || _temp-1_ || _temp+2_ || 25 || 30 ||
+|| Gorąco || 25 || 30 || 
+
+http://imageshack.us/a/img96/2294/trapez.png
+
+
+=Reguły=
 
 Przyjęto stały zestaw reguł:
   # gdy Zimno to Grzej,

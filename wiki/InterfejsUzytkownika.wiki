@@ -1,3 +1,14 @@
 #summary Opis interfejsu użytkownika
 
 = Interfejs użytkownika =
+
+Interfejs użytkownika umożliwia komunikacje z komputerem przemysłowym NPE.
+
+Po uruchomieniu programu następuje automatyczne nawiązanie połączenia z komputerem NPE. Sprawdzane są dostępne urządzenia podłączone do komputera i pobierane dane z czujników pomiarowych. Informacje są wyświetlone na konsoli interfejsu.
+Interfejs umożliwia obserwowanie działania zaimplementowanego systemu decyzyjnego.
+
+Użycie lokalnych ustawień.
+
+
+Z poziomu interfejsu jest możliwa modyfikacja systemu wspomagania decyzji (kształt funkcji przynależności)
+Program jest cykliczny, co minutę aktualizowane są działania.

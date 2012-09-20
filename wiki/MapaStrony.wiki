@@ -1,12 +1,10 @@
 #summary Opis strony interfejsu WWW
 
-== Dokumentacja techniczna strony WWW ==
+= Dokumentacja techniczna strony WWW =
 
 [http://www.smo.parakletos.pl]
 
 autor: Szymon A.Gajewski
-
-----
 
 == I.	Mapa strony: www.smo.parakletos.pl ==
 

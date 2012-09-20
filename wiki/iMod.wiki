@@ -7,7 +7,7 @@ Za obsługę interfejsów komunikacyjnych odpowiedzialna jest platforma iMod, kt
 Wyróżniamy 3 typy kanałów:
 
  * source channel - w projekcie zostały wykorzystane dwa kanały źródłowe:
-   * OneWire - do oczytywania temperatury
+   * !OneWire - do odczytywania temperatury
    * NPE I/O - do obsługi portów I/O, sterowania wbudowanymi diodami LED oraz buzzera
  * access channel - w projekcie został wykorzystany jeden kanał dostępu do danych:
    * ModbusTCP  - umożliwia komunikację poprzez Ethernet z NPE
@@ -20,7 +20,7 @@ Ogólny schemat platformy iMod przedstawia poniższy rysunek:
 http://desmond.imageshack.us/Himg253/scaled.php?server=253&filename=channels2.jpg&res=landing
 
 
-Więcej informacji na temat platformy iMod można znaleść pod adresem:
+Więcej informacji na temat platformy iMod można znaleźć pod adresem:
 
  * http://www.a2s.pl/wprowadzenie-platformy-imod-a-2084.html
 

@@ -1,4 +1,5 @@
 #summary Interfejs Modbus
+#labels Phase-Implementation
 
 = Modbus TCP =
 

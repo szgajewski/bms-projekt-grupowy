@@ -4,7 +4,6 @@
 
 Modbus jest protokołem komunikacyjnym stworzonym przez firmę Modicon. Służy do komunikacji z programowalnymi kontrolerami tej firmy, a także innych producentów.
 
-----
 
 Modbus jest protokołem warstwy aplikacji stosowanym głównie w celu wymiany danych typowych dla branży automatyki. Protokół aplikacji definiuje organizację i interpretację danych niezależnych od medium transmisyjnego.
 
@@ -20,8 +19,6 @@ Relacje są określone jako:
 
 http://desmond.imageshack.us/Himg14/scaled.php?server=14&filename=transaction.png&res=landing
 
-----
-
 W projekcie do komunikacji MODBUS TCP użyta została biblioteka jmod znajdująca się pod adresem:
 
-http://jamod.sourceforge.net/
+ * http://jamod.sourceforge.net/

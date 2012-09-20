@@ -2,21 +2,26 @@
 
 =Kod źródłowy z repozytorium SVN:=
 
- * BMS – klasa startowa
+ * BMS – klasa startowa, odpowiadająca za cykliczne wywoływanie metod Systemu decyzyjnego.
 
- * DBConnection – klasa zawierająca obsługę mechanizmów związanych z bazą danych. Nawiązywana jest tu komunikacja z serwerem MySql. Sformułowane są tu również wszystkie niezbędne zapytania do bazy danych potrzebne do działania systemu decyzyjnego oraz do aktualizowania danych interfejsu WWW.
+ * DBConnection – klasa zawierająca obsługę mechanizmów związanych z bazą danych. Nawiązywana jest tu komunikacja z serwerem MySql. Sformułowane są tu również wszystkie niezbędne zapytania do bazy danych potrzebne do działania systemu decyzyjnego oraz do aktualizowania danych interfejsu WWW, m.in. :
+  * pobieranie reguł dotyczących danej strefy,
+  * zapis do bazy temperatur odczytanych z komputera NPE,
+  * odczyt ilości czujników w systemie.
 
  * GUI – klasa obsługująca interfejs użytkownika
 
- * ModbusTCPConnection – klasa odpowiadająca za komunikację z komputerem NPE. Przekazywane są tu dane dotyczące temperatury, a także decyzje systemu diagnostycznego.
+ * ModbusTCPConnection – klasa odpowiadająca za komunikację z komputerem NPE. Posiada metody odpowiedzialne za:
+  * odczyt temperatur z komputera,
+  * wysłanie decyzji na komputer.
 
- * Regula – obsługa pobierania reguł systemu decyzyjnego
+ * Regula – klasa opisująca strukturę przechowującą dane odczytane z bazy danych, m.in. :
+  * temperatura idealna,
+  * strefa.
 
- * SD – oprócz obsługi reguł systemu wspomagania decyzji następuje tu kolejno: 
-   * Odczyt ilości czujników z bazy
-   * Odczyt temperatur z komputera NPE
-   * Pobranie reguł
-   * Podejmowanie decyzji
-   * Rozgłoszenie decyzji
-   * Zapis do bazy i wysłanie decyzji do komputera NPE
-
+ * SD – klasa odpowiedzialna za działanie systemu decyzyjnego: 
+   # Odczyt ilości czujników z bazy,
+   # Odczyt temperatur z komputera NPE,
+   # Pobranie reguł z bazy, bądź ustawionych lokalnie,
+   # Obliczenie decyzji dla strefy,
+   # Zapis decyzji do bazy oraz wysłanie jej do komputera NPE.

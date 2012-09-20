@@ -2,7 +2,7 @@
 
 = Platforma iMod =
 
-Za obsługę interfejsów komunikacyjnych odpowiedzialna jest platforma iMod, która składa się z komputera NPE oraz oprogramowania. Platforma iMod zdefiniowana jest o system niezależnych kanałów (channels), które definiuje się w pliku MainConfig.xml na urządzeniu. 
+Za obsługę interfejsów komunikacyjnych odpowiedzialna jest platforma iMod, która składa się z komputera NPE oraz oprogramowania. Platforma iMod zdefiniowana jest o system niezależnych kanałów (channels), które definiuje się w pliku !MainConfig.xml na urządzeniu. 
 
 Wyróżniamy 3 typy kanałów:
 

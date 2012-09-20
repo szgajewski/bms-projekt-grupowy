@@ -1,8 +1,10 @@
 #summary Opis strony interfejsu WWW
 
-= Introduction =
+= Dokumentacja techniczna strony WWW =
 
-Add your content here.
+[http://www.smo.parakletos.pl]
+
+autor: Szymon A.Gajewski
 
 
 = Details =

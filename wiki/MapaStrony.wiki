@@ -4,7 +4,7 @@
 
 [http://www.smo.parakletos.pl]
 
-autor: Szymon A.Gajewski
+*_autor: Szymon A.Gajewski_*
 
 == I.	Mapa strony: www.smo.parakletos.pl ==
 

@@ -1,0 +1,30 @@
+#summary Opis platformy iMod
+
+= Platforma iMod =
+
+Za obsługę interfejsów komunikacyjnych odpowiedzialna jest platforma iMod, która składa się z komputera NPE oraz oprogramowania. Platforma iMod zdefiniowana jest o system niezależnych kanałów (channels), które definiuje się w pliku MainConfig.xml na urządzeniu. 
+
+Wyróżniamy 3 typy kanałów:
+
+ * source channel - w projekcie zostały wykorzystane dwa kanały źródłowe:
+   * OneWire - do sczytywania temperatury
+   * NPE I/O - do obsługi portów I/O, sterowania wbudowanymi diodami LED oraz buzzera
+ * access channel - w projekcie został wykorzystany jeden kanał dostępu do danych:
+   * MODBUS TCP  - umożliwia komunikację poprzez Ethernet z NPE
+ * message channel - w projekcie zostały wykorzystane dwa kanały wiadomości:
+   * e-mail - do informowania użytkownika, jeżeli temperatura przekroczy zadaną wartość lub spadnie poniżej innej określonej wartości 
+   * zapis do pliku .csv - do zapisywania pomiarów temperatury co określony przedział czasu
+
+Ogólny schemat platformy iMod przedstawia poniższy rysunek:
+
+http://desmond.imageshack.us/Himg253/scaled.php?server=253&filename=channels2.jpg&res=landing
+
+
+Więcej informacji na temat platformy iMod można znaleść pod adresem:
+
+http://www.a2s.pl/wprowadzenie-platformy-imod-a-2084.html
+
+Instrukcje jak napisać plik konfiguracyjny znajdują się pod adresem:
+ 
+http://www.a2s.pl/imod-94xx-gprs-p-5808.html
+

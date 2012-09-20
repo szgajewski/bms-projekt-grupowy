@@ -1,4 +1,4 @@
-#summary Opis interfejsu Modbus
+#summary Interfejs Modbus
 
 = Modbus TCP =
 

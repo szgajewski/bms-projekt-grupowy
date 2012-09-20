@@ -7,10 +7,10 @@ Za obsługę interfejsów komunikacyjnych odpowiedzialna jest platforma iMod, kt
 Wyróżniamy 3 typy kanałów:
 
  * source channel - w projekcie zostały wykorzystane dwa kanały źródłowe:
-   * !OneWire - do odczytywania temperatury
+   * OneWire - do odczytywania temperatury
    * NPE I/O - do obsługi portów I/O, sterowania wbudowanymi diodami LED oraz buzzera
  * access channel - w projekcie został wykorzystany jeden kanał dostępu do danych:
-   * ModbusTCP  - umożliwia komunikację poprzez Ethernet z NPE
+   * [ModbusTCP] - umożliwia komunikację poprzez Ethernet z NPE
  * message channel - w projekcie zostały wykorzystane dwa kanały wiadomości:
    * e-mail - do informowania użytkownika, jeżeli temperatura przekroczy zadaną wartość lub spadnie poniżej innej określonej wartości 
    * zapis do pliku .csv - do zapisywania pomiarów temperatury co określony przedział czasu

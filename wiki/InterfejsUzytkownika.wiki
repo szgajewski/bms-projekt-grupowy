@@ -2,13 +2,39 @@
 
 = Interfejs użytkownika =
 
-Interfejs użytkownika umożliwia komunikacje z komputerem przemysłowym NPE.
+===Log===
 
-Po uruchomieniu programu następuje automatyczne nawiązanie połączenia z komputerem NPE. Sprawdzane są dostępne urządzenia podłączone do komputera i pobierane dane z czujników pomiarowych. Informacje są wyświetlone na konsoli interfejsu.
-Interfejs umożliwia obserwowanie działania zaimplementowanego systemu decyzyjnego.
+Z lewej strony strony wyświetlany jest log działania systemu zawierający następujące informacje:
+  * aktualne czas i data,
+  * ilości czujników,
+  * nawiązaniu połączenia z komputerem NPE,
+  * odczytanych temperaturach,
+  * dane z systemu decyzyjnego: 
+    * strefa,
+    * temperatura idealna,
+    * decyzja systemu.
+http://desmond.imageshack.us/Himg3/scaled.php?server=3&filename=10660504.png&res=landing
 
-Użycie lokalnych ustawień.
+===Prezentacja danych===
+Prawa strona interfejsu prezentuje następujące dane dla strefy:
+  * idealna temperatura,
+  * aktualna temperatura,
+  * decyzja w formie opisowej oraz wartość zmiennej decyzyjnej. 
+http://desmond.imageshack.us/Himg443/scaled.php?server=443&filename=48130985.png&res=landing 
 
+===Tryby pracy===
+Interfejs umożliwia także zmianę trybu pracy [SystemDecyzyjny systemu decyzyjnego].
 
-Z poziomu interfejsu jest możliwa modyfikacja systemu wspomagania decyzji (kształt funkcji przynależności)
-Program jest cykliczny, co minutę aktualizowane są działania.
+http://desmond.imageshack.us/Himg69/scaled.php?server=69&filename=86376799.png&res=landing
+
+W podstawowym trybie wykorzystywane są trzy elementy interfejsu:
+  * przycisk włączający tryb lokalny podstawowy,
+  * suwaki służące do ustawiania idealnej temperatury,
+
+http://desmond.imageshack.us/Himg100/scaled.php?server=100&filename=10200848.png&res=landing
+
+W dolnej części interfejsu znajdują się opcje dostępne w trybie zaawansowanym systemu decyzyjnego. 
+
+W kolejnych zakładkach możliwa jest zmiana typu funkcji przynależności oraz określenie odpowiednich dla niej parametrów.
+
+http://desmond.imageshack.us/Himg528/scaled.php?server=528&filename=71617286.png&res=landing

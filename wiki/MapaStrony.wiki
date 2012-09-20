@@ -29,221 +29,65 @@ autor: Szymon A.Gajewski
 
 == II.	Opis ogólny strony www.smo.parakletos.pl ==
 
-Strona www.smo.parakletos.pl jest częścią projektu budowy Sieciowego Monitora Obiektów na katedrze Systemów Decyzyjnych 
-
-Politechniki Gdańskiej. Ma ona za zadanie przedstawienie możliwości zarządzania, monitorowania oraz modyfikowania pewnych 
-
-właściwości budynku. Jest to dodatkowy system zarządzający, współistotny do systemu komputerowego, który to daje możliwość 
-
-monitu bezpośrednio przy podłączonym urządzeniu. Zrealizowane i opisane tu narzędzia w większości ukazują możliwość symulacji 
-
-pewnych cech czy możliwości budynku. Jedynym wyjątkiem jest zakładka termometry ukazująca rzeczywiste pomiary modelowanego 
-
-budynku. Pozostałe narzędzia zostały zasymulowane, pozwalając na łatwą implementację w przypadku, gdy administrator będzie 
-
-chciał podłączyć zdalną część Systemu Monitorowania Obiektu (SMO) do rzeczywistego układu.
+Strona www.smo.parakletos.pl jest częścią projektu budowy Sieciowego Monitora Obiektów na katedrze Systemów Decyzyjnych Politechniki Gdańskiej. Ma ona za zadanie przedstawienie możliwości zarządzania, monitorowania oraz modyfikowania pewnych właściwości budynku. Jest to dodatkowy system zarządzający, współistotny do systemu komputerowego, który to daje możliwość monitu bezpośrednio przy podłączonym urządzeniu. Zrealizowane i opisane tu narzędzia w większości ukazują możliwość symulacji pewnych cech czy możliwości budynku. Jedynym wyjątkiem jest zakładka termometry ukazująca rzeczywiste pomiary modelowanego budynku. Pozostałe narzędzia zostały zasymulowane, pozwalając na łatwą implementację w przypadku, gdy administrator będzie chciał podłączyć zdalną część Systemu Monitorowania Obiektu (SMO) do rzeczywistego układu.
 
 == III.	Wymagania techniczne  ==
 
-Przeglądarki internetowe dla autorów stron to błogosławieństwo i przekleństwo jednocześnie. Pomagają one w przedstawieniu 
-
-autorskich wizji programisty, ale jednocześnie zmuszają do zachowania pewnych standardów oraz norm, które narzucają zarówno 
-
-producenci tych programów jak i firmy zajmujące się standaryzacją pisania oraz przesyłu stron (np. www.w3c.org). Największym 
-
-problemem dla programistów jest różna interpretacja kodu źródłowego przez poszczególne przeglądarki.
-Przykładowo w najnowszym standardzie HTML5 autorzy dodali nowe atrybuty dla tagu „input”, między innymi „range”. Jest on 
-
-obsługiwany przez 3 z 5 podstawowych przeglądarek (nie typ ten nie wyświetla się zarówno dla Mozilli, jak i dla Internet 
-
-Explorera) . W związku z wykorzystywaniem na tej stronie tego typu „wejścia” należało dodać jedną z bibliotek JavaScript 
-
-napisaną właśnie pod przeglądarkę Mozilla, która to symuluje działanie „range” . Również właściwość „background” udostępniona 
-
-dzięki najnowszemu arkuszowi stylów CSS3, jest nieobsługiwana w niektórych przypadkach przez część przeglądarek (na przykład 
-
-opcja gradientu radialnego nie występuje w przeglądarce Internet Explorer). W związku z powyższymi problemami zaleca się 
-
-stosowanie którejś z 3 podstawowych przeglądarek (Opera, Google Chrome, Mozilla FireFox), najlepiej w najnowszych wersjach. 
-
-Użytkownicy Internet Explorer wchodząc na tę stronę zostają poinformowani, że nie będzie działała ona tak, jak zaplanował 
-
-sobie to autor strony i uprasza się o zainstalowanie innej przeglądarki, lepiej spełniającej aktualne standardy.
+Przeglądarki internetowe dla autorów stron to błogosławieństwo i przekleństwo jednocześnie. Pomagają one w przedstawieniu autorskich wizji programisty, ale jednocześnie zmuszają do zachowania pewnych standardów oraz norm, które narzucają zarówno producenci tych programów jak i firmy zajmujące się standaryzacją pisania oraz przesyłu stron (np. www.w3c.org). Największym problemem dla programistów jest różna interpretacja kodu źródłowego przez poszczególne przeglądarki.
+Przykładowo w najnowszym standardzie HTML5 autorzy dodali nowe atrybuty dla tagu „input”, między innymi „range”. Jest on obsługiwany przez 3 z 5 podstawowych przeglądarek (nie typ ten nie wyświetla się zarówno dla Mozilli, jak i dla Internet Explorera) . W związku z wykorzystywaniem na tej stronie tego typu „wejścia” należało dodać jedną z bibliotek JavaScript napisaną właśnie pod przeglądarkę Mozilla, która to symuluje działanie „range” . Również właściwość „background” udostępniona dzięki najnowszemu arkuszowi stylów CSS3, jest nieobsługiwana w niektórych przypadkach przez część przeglądarek (na przykład opcja gradientu radialnego nie występuje w przeglądarce Internet Explorer). W związku z powyższymi problemami zaleca się stosowanie którejś z 3 podstawowych przeglądarek (Opera, Google Chrome, Mozilla FireFox), najlepiej w najnowszych wersjach. Użytkownicy Internet Explorer wchodząc na tę stronę zostają poinformowani, że nie będzie działała ona tak, jak zaplanował sobie to autor strony i uprasza się o zainstalowanie innej przeglądarki, lepiej spełniającej aktualne standardy.
 
 
 == IV.	Wykorzystane języki programowania ==
 
- # HTML - HyperText Markup Language (HTML) jest podstawowym rodzajem języka wykorzystywanym do pisania stron internetowych. W 
-
-trakcie pracy nad tą stroną testowane były możliwości najnowszego standardu tegoż języka (HTML5). Język ten pozwalał na 
-
-nadawanie znaczenia poszczególnym fragmentom tekstów, dodawanie hiperłączy, oraz akapitów (przy pomocy tagu „div”). 
- # CSS - Cascading Style Sheets (CSS) to niezwykle istotne narzędzie do zarządzania stylem tworzonej strony. Aby za każdym 
-
-razem nie opisywać od nowa jednej klasy istnieje możliwość zdefiniowania dowolnego id lub klasy, na którą przeglądarka ma 
-
-zareagować w określony sposób, to jest na przykład ustawiając wybraną przez programistę wielkość czcionki, kolor tła czy 
-
-wygląd kursora. W tej pracy w miejscach gdzie było to możliwe stosowane były rozwiązania z najnowszego standardu (CSS3).
- # PHP - Personal Home Page (PHP) jest obecnie jednym z najczęściej wykorzystywanych obiektowych języków programowania 
-
-zaprojektowanych do generowania stron internetowych. Jego cechą charakterystyczną, choć nie wyróżniającą jest fakt, iż 
-
-wykonywany jest po stronie serwera, przez co nie obciąża przeglądarki internetowej. Przy pomocy tego języka odbywała się cała 
-
-komunikacja strony internetowej z bazą danych. Umożliwia on zarówno odczyt z jak i zapis danych do bazy danych.
- # JS - JavaScript jest skryptowym językiem, który użyty został w tym przypadku do dynamicznej zmiany treści. W większości 
-
-przypadków przeglądarka korzystała z biblioteki jQuery, która pozwala na przekazywanie danych do dowolnego pliku PHP jak i 
-
-również odczytu danych z niego. Możliwość edytowania poszczególnych elementów strony HTML w czasie rzeczywistym jest główną 
-
-zaletą tego języka. Dzięki temu bez odświeżania całej strony istnieje możliwość aktualizacji wybranego elementu strony co 
-
-określony czas.
- # SQL - Structured Query Language (SQL) posłużył jako podstawa wydobywania oraz dodawania informacji do bazy danych. W tym 
-
-celu użyte zostało rozwiązanie firmy Oracle MySQL.
+ # HTML - HyperText Markup Language (HTML) jest podstawowym rodzajem języka wykorzystywanym do pisania stron internetowych. W trakcie pracy nad tą stroną testowane były możliwości najnowszego standardu tegoż języka (HTML5). Język ten pozwalał na nadawanie znaczenia poszczególnym fragmentom tekstów, dodawanie hiperłączy, oraz akapitów (przy pomocy tagu „div”).
+ # CSS - Cascading Style Sheets (CSS) to niezwykle istotne narzędzie do zarządzania stylem tworzonej strony. Aby za każdym razem nie opisywać od nowa jednej klasy istnieje możliwość zdefiniowania dowolnego id lub klasy, na którą przeglądarka ma zareagować w określony sposób, to jest na przykład ustawiając wybraną przez programistę wielkość czcionki, kolor tła czy wygląd kursora. W tej pracy w miejscach gdzie było to możliwe stosowane były rozwiązania z najnowszego standardu (CSS3).
+ # PHP - Personal Home Page (PHP) jest obecnie jednym z najczęściej wykorzystywanych obiektowych języków programowania zaprojektowanych do generowania stron internetowych. Jego cechą charakterystyczną, choć nie wyróżniającą jest fakt, iż wykonywany jest po stronie serwera, przez co nie obciąża przeglądarki internetowej. Przy pomocy tego języka odbywała się cała komunikacja strony internetowej z bazą danych. Umożliwia on zarówno odczyt z jak i zapis danych do bazy danych.
+ # JS - JavaScript jest skryptowym językiem, który użyty został w tym przypadku do dynamicznej zmiany treści. W większości przypadków przeglądarka korzystała z biblioteki jQuery, która pozwala na przekazywanie danych do dowolnego pliku PHP jak i również odczytu danych z niego. Możliwość edytowania poszczególnych elementów strony HTML w czasie rzeczywistym jest główną zaletą tego języka. Dzięki temu bez odświeżania całej strony istnieje możliwość aktualizacji wybranego elementu strony co określony czas.
+ # SQL - Structured Query Language (SQL) posłużył jako podstawa wydobywania oraz dodawania informacji do bazy danych. W tym celu użyte zostało rozwiązanie firmy Oracle MySQL.
 
 == V.	Opis szczegółowy zawartości strony internetowej ==
 
- # USTAWIENIA - Podstawowym zadaniem, do którego przeznaczona jest omawiana strona to monitoring pomiarów i stanów urządzeń w 
-
-budynku, co zebrane jest w zakładce WSKAZANIA. Aby móc badać pomiary, symulować włączanie/wyłączanie systemów potrzeba 
-
-urządzeń, którymi mamy się posługiwać. W tym celu została dodana strona SYMULATOR BUDYNKU. Obydwa te zadania zostały 
-
-umieszczone pod pojęciem USTAWIENIA
-   * Symulator budynku - W budynku, w którym chcemy, aby system sterował odpowiednio światłem, temperaturą, czy systemem 
-
-przeciwpożarowym potrzeba dwóch podstawowych rzeczy: pomieszczenia oraz aparatury kontrolno-pomiarowej. W tym miejscu na 
-
-stronie internetowej jest możliwość ich dodawania, aby użytkownik później mógł sterować aparaturą, lub w przyszłości zadać 
-
-systemowi, jak ma się zachowywać w określonych warunkach.
-     * Dodaj pokój - Dodawanie pomieszczenia to pierwszy krok w pracy z Generatorem Budynku. W sytuacji, kiedy żadnego pokoju 
-
-jeszcze nie ma to nie można dodać aparatury, którą administrator później może sterować. 
-     * Dodaj aparaturę - Posiadając utworzony pokój istnieje możliwość dodania do niego dowolnej ilości narzędzi, którymi 
-
-system będzie mógł sterować (to samo tyczy się kontrolerów, które pozwalają na odczyt pomiarów). Aby możliwe było zarządzanie 
-
-ważne jest posiadanie dostępu do odpowiednich przyrządów. Nie jest możliwe kontrolowanie odpowiedniej temperatury, jeżeli w 
-
-danym pomieszczeniu nie ma systemu, który pozwala na ogrzanie i ochłodzenie powietrza. Tak samo nie można ustalić poziomu 
-
-jasności w pokoju, o ile nie posiadamy narzędzi dających możliwość rozjaśnienia i zaciemnienia pomieszczenia. W SMO zostały 
-
-jednak przedstawione tylko podstawowe narzędzia, którymi sterować można osobno, a nie systemy do kontroli parametrów takich 
-
-jak temperatura czy jasność.  
-     * Wykaz - Wykaz jest miejscem, gdzie użytkownik może sprawdzić jakie pokoje ma do dyspozycji oraz ile narzędzi danego 
-
-typu znajduje się w tym pomieszczeniu. Pozwala to na kontrolę oraz późniejszą analizę w przypadku zakupów.
-     * Usuń aparaturę - Skasowanie danej aparatury wiąże się z jej likwidacją z bazy danych. Jest to operacja, której nie 
-
-można cofnąć. W celu ułatwienia zarządzaniem narzędziami została dodana opcja kasowania więcej niż jednego przedmiotu.
-     * Usuń pokój - Podobnie jak w sytuacji powyżej: takiej operacji nie można cofnąć. Ważną różnicą jest fakt, iż kasując 
-
-dany pokój likwiduje się również całą aparaturę tam się znajdującą. Również tu, jak w zakładce usuń aparaturę, możliwe jest 
-
-kasowanie więcej niż jednego pomieszczenia. 
-   * Wskazania - Głównym zadaniem strony www.smo.parakletos.pl jest monitorowanie wskazań stanu urządzeń. W tym celu 
-
-stworzona została zakładka wskazania. Pierwsze cztery występujące tam narzędzia (światła, okna, wentylatory, kaloryfery) dają 
-
-możliwość ustawienia żądanych przez administratora wartości, jednak są to aparatury symulowane, które użytkownik tworzy w 
-
-symulatorze budynku. Ostatnia z nich (temperatury) umożliwia wgląd w ostatni zarejestrowany stan termometrów podłączonych do 
-
-modelu Inteligentnego Budynku. 
-     * Światła - Użytkownik ma możliwość zasymulowania włączania oraz wyłączania dowolnego źródła światła, które wcześniej 
-
-utworzył. Aktualny stan wybranego aparatu świetlnego zapisywany jest w bazie danych, skąd może zostać odczytany przez moduł 
-
-zarządzający Inteligentnym Budynkiem. Istnieje również możliwość wyłączenia jednocześnie wszystkich świateł, na wypadek, 
-
-gdyby użytkownik na przykład wychodził z mieszkania w pośpiechu i chciał wyłączyć je zdalnie. Zielona obwódka przycisku 
-
-oznacza włączenie danego systemu, czerwona – jego wyłączenie.
-     * Okna - Sposób działania okien (czyli otwierania oraz zamykania) jest analogiczny do zarządzania światłem. Również w 
-
-tym przypadku jest to system binarny. W przypadku rozbudowy tego systemu istnieje możliwość dodania, poza systemem 
-
-otwierania/zamykania okna, również opcję zasłaniania rolet tam zamontowanych (tak zwany system ciągły, umożliwiający 
-
-zasłanianie w dowolnym procencie danego okna). 
-     * Wentylatory - Wentylacja staje się standardem w nowoczesnych mieszkaniach. Administrator ma możliwość ustawienia 
-
-procentu wydajności danego systemu. Po zmianie wartości mocy, z jaką ma aparatura działać przycisk obok niego zmienia się na 
-
-kolor czerwony. Oznacza to, że jest to wartość zmieniona, ale nie zapisana jeszcze w bazie danych. Po naciśnięciu tego 
-
-przycisku zmieni on kolor na zielony. Wówczas dana wartość jest już w bazie danych. Istnieje możliwość zmiany wartości kilku 
-
-urządzeń, a później akceptacji wszystkich zmienionych wartości przez naciśnięcie odpowiednio opisanego przycisku. 
-
-Udostępniona została również opcja analogiczna do spotkanych w aparaturach binarnych (światła i okna), a mianowicie 
-
-wyłączanie wszystkich urządzeń. Przycisk ten zeruje wartość wszystkich urządzeń. 
-     * Kaloryfery - W tym przypadku, podobnie jak w zakładce wentylatory użytkownik dostaje możliwość procentowego 
-
-zarządzania danymi aparaturami. 
-     * Termometry - Jak zostało wspomniane wcześniej jest to jedyna zakładka, która przedstawia rzeczywiste pomiary zebrane z 
-
-urządzeń fizycznych, umieszczonych w makiecie Inteligentnego Budynku. Domyślnie ustawione są dwa termometry, których dane 
-
-zapisane są w bazie danych. Zapytanie o aktualne pomiary wysyłane jest co 5 sekund, co można zaobserwować w komórce: data 
-
-aktualizacji. Aby nie obciążało to serwera, ani przeglądarki użytkownika zostało to zrealizowane przy pomocy biblioteki 
-
-jQuery, która zezwala na aktualizację tylko niektórych fragmentów strony, zamiast całości.
+ # USTAWIENIA - Podstawowym zadaniem, do którego przeznaczona jest omawiana strona to monitoring pomiarów i stanów urządzeń w budynku, co zebrane jest w zakładce WSKAZANIA. Aby móc badać pomiary, symulować włączanie/wyłączanie systemów potrzeba urządzeń, którymi mamy się posługiwać. W tym celu została dodana strona SYMULATOR BUDYNKU. Obydwa te zadania zostały umieszczone pod pojęciem USTAWIENIA
+   * Symulator budynku - W budynku, w którym chcemy, aby system sterował odpowiednio światłem, temperaturą, czy systemem przeciwpożarowym potrzeba dwóch podstawowych rzeczy: pomieszczenia oraz aparatury kontrolno-pomiarowej. W tym miejscu na stronie internetowej jest możliwość ich dodawania, aby użytkownik później mógł sterować aparaturą, lub w przyszłości zadać systemowi, jak ma się zachowywać w określonych warunkach.
+     * Dodaj pokój - Dodawanie pomieszczenia to pierwszy krok w pracy z Generatorem Budynku. W sytuacji, kiedy żadnego pokoju jeszcze nie ma to nie można dodać aparatury, którą administrator później może sterować. 
+     * Dodaj aparaturę - Posiadając utworzony pokój istnieje możliwość dodania do niego dowolnej ilości narzędzi, którymi system będzie mógł sterować (to samo tyczy się kontrolerów, które pozwalają na odczyt pomiarów). Aby możliwe było zarządzanie ważne jest posiadanie dostępu do odpowiednich przyrządów. Nie jest możliwe kontrolowanie odpowiedniej temperatury, jeżeli w danym pomieszczeniu nie ma systemu, który pozwala na ogrzanie i ochłodzenie powietrza. Tak samo nie można ustalić poziomu jasności w pokoju, o ile nie posiadamy narzędzi dających możliwość rozjaśnienia i zaciemnienia pomieszczenia. W SMO zostały jednak przedstawione tylko podstawowe narzędzia, którymi sterować można osobno, a nie systemy do kontroli parametrów takich jak temperatura czy jasność.  
+     * Wykaz - Wykaz jest miejscem, gdzie użytkownik może sprawdzić jakie pokoje ma do dyspozycji oraz ile narzędzi danego typu znajduje się w tym pomieszczeniu. Pozwala to na kontrolę oraz późniejszą analizę w przypadku zakupów.
+     * Usuń aparaturę - Skasowanie danej aparatury wiąże się z jej likwidacją z bazy danych. Jest to operacja, której nie można cofnąć. W celu ułatwienia zarządzaniem narzędziami została dodana opcja kasowania więcej niż jednego przedmiotu.
+     * Usuń pokój - Podobnie jak w sytuacji powyżej: takiej operacji nie można cofnąć. Ważną różnicą jest fakt, iż kasując dany pokój likwiduje się również całą aparaturę tam się znajdującą. Również tu, jak w zakładce usuń aparaturę, możliwe jest kasowanie więcej niż jednego pomieszczenia. 
+   * Wskazania - Głównym zadaniem strony www.smo.parakletos.pl jest monitorowanie wskazań stanu urządzeń. W tym celu stworzona została zakładka wskazania. Pierwsze cztery występujące tam narzędzia (światła, okna, wentylatory, kaloryfery) dają możliwość ustawienia żądanych przez administratora wartości, jednak są to aparatury symulowane, które użytkownik tworzy w symulatorze budynku. Ostatnia z nich (temperatury) umożliwia wgląd w ostatni zarejestrowany stan termometrów podłączonych do modelu Inteligentnego Budynku. 
+     * Światła - Użytkownik ma możliwość zasymulowania włączania oraz wyłączania dowolnego źródła światła, które wcześniej utworzył. Aktualny stan wybranego aparatu świetlnego zapisywany jest w bazie danych, skąd może zostać odczytany przez moduł zarządzający Inteligentnym Budynkiem. Istnieje również możliwość wyłączenia jednocześnie wszystkich świateł, na wypadek, gdyby użytkownik na przykład wychodził z mieszkania w pośpiechu i chciał wyłączyć je zdalnie. Zielona obwódka przycisku oznacza włączenie danego systemu, czerwona – jego wyłączenie.
+     * Okna - Sposób działania okien (czyli otwierania oraz zamykania) jest analogiczny do zarządzania światłem. Również w tym przypadku jest to system binarny. W przypadku rozbudowy tego systemu istnieje możliwość dodania, poza systemem otwierania/zamykania okna, również opcję zasłaniania rolet tam zamontowanych (tak zwany system ciągły, umożliwiający zasłanianie w dowolnym procencie danego okna). 
+     * Wentylatory - Wentylacja staje się standardem w nowoczesnych mieszkaniach. Administrator ma możliwość ustawienia procentu wydajności danego systemu. Po zmianie wartości mocy, z jaką ma aparatura działać przycisk obok niego zmienia się na kolor czerwony. Oznacza to, że jest to wartość zmieniona, ale nie zapisana jeszcze w bazie danych. Po naciśnięciu tego przycisku zmieni on kolor na zielony. Wówczas dana wartość jest już w bazie danych. Istnieje możliwość zmiany wartości kilku urządzeń, a później akceptacji wszystkich zmienionych wartości przez naciśnięcie odpowiednio opisanego przycisku. Udostępniona została również opcja analogiczna do spotkanych w aparaturach binarnych (światła i okna), a mianowicie wyłączanie wszystkich urządzeń. Przycisk ten zeruje wartość wszystkich urządzeń. 
+     * Kaloryfery - W tym przypadku, podobnie jak w zakładce wentylatory użytkownik dostaje możliwość procentowego zarządzania danymi aparaturami. 
+     * Termometry - Jak zostało wspomniane wcześniej jest to jedyna zakładka, która przedstawia rzeczywiste pomiary zebrane z urządzeń fizycznych, umieszczonych w makiecie Inteligentnego Budynku. Domyślnie ustawione są dwa termometry, których dane zapisane są w bazie danych. Zapytanie o aktualne pomiary wysyłane jest co 5 sekund, co można zaobserwować w komórce: data aktualizacji. Aby nie obciążało to serwera, ani przeglądarki użytkownika zostało to zrealizowane przy pomocy biblioteki jQuery, która zezwala na aktualizację tylko niektórych fragmentów strony, zamiast całości.
  # INNE
-   * O programie - W tym miejscu zebrane zostały informacje na temat funkcjonowania strony, jej celu (czyli w większości to, 
-
-co jest zapisane w tym dokumencie).
+   * O programie - W tym miejscu zebrane zostały informacje na temat funkcjonowania strony, jej celu (czyli w większości to, co jest zapisane w tym dokumencie).
    * Kontakt - Zamieszczone zostały tu podstawowe informacje o temacie projektu oraz nazwiska autorów.
 
 == VI.	Rozwiązania programistyczne ==
 
  # index.php - Omawiana strona internetowa została napisana całkowicie od podstaw. Główny szablon opiera się na dwóch częściach. Na lewym pasku widoczne są kolejno nagłówek, menu oraz stopka. Prawa strona ekranu natomiast zawiera kontener, w którym wyświetlane są wszelkie informacje.  Na tej stronie zdefiniowane są odwołania do arkusza styli (style.css, list_menu.css) oraz pliku zawierającego skrypty JS (anime.js, html5slider.js). W ten sposób nie trzeba w każdej nowoutworzonej stronie ponownie definiować lub importować tych plików. 
-
  # config.php - Zgodnie z dobrą praktyką programistyczną dane konfiguracyjne bazy danych trzymane są w oddzielnym pliku. Plik ten przywoływany jest za pomocą komendy: require("../config.php"); w skryptach *.php. 
-
  # header.php i bottom.php - Pliki te zawierają treść nagłówka oraz stopki. Utworzenie oddzielnych plików ułatwia ewentualną edycję któregokolwiek z tych elementów.
-
  # left_menu.php - Plik index.php posiada w swoim kodzie przekierowania warunkowe uzależnione od zmiennej przekazanej przy pomocy formularza GET. Zmienna „p” odpowiada za adres strony, która ma być otwarta ustawiana jest w hiperlinkach właśnie na tej stronie. Przykładowo:
 <a href='index.php?p=02'><div class="buttons" id="state">wskazania</div></a> oznacza, że po naciśnięciu tego linka (który de facto jest blokiem danych – div) spowoduje przeniesienie użytkownika pod adres „/index.php?p=02”. Na stronie głównej natomiast jest zapis, że dla p=”02” w prawym oknie powinno znaleźć się: 
 "php/menu/state.php".
-
-
  # about.php i contact.php - Zawarte tu dane wyświetlane są w przypadku naciśnięcia przycisku „kontakt” lub „o programie”. Zaletą takiego rozwiązania jest fakt, iż w jednym pliku jest mniejsza ilość informacji, co ułatwia programiście znalezienie ewentualnych błędów, czy naniesienie poprawek.
-
  # state.php i advance.php - Wykorzystany został tu skrypt umożliwiający tworzenie menu w formie zakładek . Każda zakładka jest właściwie przyciskiem, przenoszącym użytkownika na wybraną przez niego stronę w sposób analogiczny jak przez wybranie dowolnej pozycji z lewego menu, z tą różnicą, że pozostaje wciąż widoczna lista „kart-linków”. W przypadku wybrania danej karty właściwości wszystkich kart zostają restartowane, a wybrana zostaje wyróżniona przez otrzymanie odpowiedniej klasy „aktywnej”.
-
  # lights.php i windows.php oraz fans.php i heaters.php - Wszystkie cztery pliki wyświetlające informacje na temat stanu urządzenia działają w sposób analogiczny, jednak można tu wyróżnić dwie pary najbardziej do siebie podobne. Wyświetlanie informacji na temat stanu „świateł” oraz „okien” różni się właściwie tylko wywołaniem SQL. Treść całego zapytania jest następująca:
 "SELECT DISTINCT pokoj.id_poziom, poziom.nazwa FROM pokoj INNER JOIN aparat ON aparat.id_pokoj = pokoj.id INNER JOIN poziom ON pokoj.id_poziom = poziom.id WHERE aparat.id_aparatura = ".$nr." ORDER BY pokoj.id_poziom".
 Pod zmienną $nr w przypadku światła ustawiona jest wartość „1”, a w drugim z nich „2”, a dalej przez analogię. Przyciski zostały zrobione przy pomocy dwóch zawierających się bloków (div) z ustawionymi zaokrągleniami rogów oraz ustawioną funkcją dodania cienia i zmianą koloru tła.
 W przypadku drugiej pary dodany został także wspomniany wcześniej „suwak”, czyli input typu „range”. W razie zmiany jego wartości zmienia się również klasa przycisku znajdującego się obok (czego efektem jest zmiana koloru tła przycisku), oraz uaktualniana jest wartość liczbowa z lewej strony. W przypadku naciśnięcia przycisku czerwonego obok suwaka aktualna wartość zostanie zmieniona w bazie danych. Ten sam efekt, ale dla większej ilości input’ów można osiągnąć naciskając „zatwierdź wszystkie”. Wyłączanie wszystkich elementów widocznych na stronie możliwe jest dla każdego z czterech omówionych typów aparatury.
-
-
  # thermo.php - Wyróżniony wcześniej element tej strony: zakładka „termometry” posiada dwa elementy symulujące termometr oraz tabelę z informacjami. Sam przyrząd składa się z szeregu bloków, z których dwa najważniejsze to class=”suwak” i class=”zaslon_1/2”. Ich działanie polega na tym, iż w JS otrzymując z bazy danych wartość temperatury przeskalowuje to na procenty i ustawia wysokość drugiej z nich jako 50-temperatura_zmierzona, a pierwszej z tych klas na 100-wyliczony_poprzednio_procent. Blok o klasie „zaslon” posiada nieco inną barwę, przez co daje wrażenie niższej temperatury. Dane pozostałe wpisywane są bezpośrednio w przygotowane wcześniej na to miejsca w blokach div.
-
  # dodaj_pokoj.php, dodaj_aparat.php i wykaz_uzbrojenia.php - Dodawanie nowych elementów do bazy danych następuje w sposób podobny w obydwu przypadkach. Dodając pokój użytkownik musi wpisać jego nazwę oraz wybrać z listy poziom (piętro), na którym dany pokój ma się znaleźć. Po tych operacjach można kliknąć przycisk z podwójną strzałką w prawą stronę co skutkuje wysłaniem danych do bazy (najpierw do JS, skąd informacje wyłuskiwane są ze strony oraz przesyłane dalej do formularza napisanego w PHP, który zajmuje się dodaniem odpowiednich informacji do właściwej kolumny), a użytkownikowi pojawia się informacja, iż dany pokój został dodany. Pod formularzem dodawania wyświetlana jest również lista wszystkich pokoi oraz aparatur, które są w nich umieszczone. Można zauważyć, że podczas wyświetlania informacji potwierdzającej dane są uaktualniane w tabeli. Ta tabela to właśnie odświeżana strona wykaz_uzbrojenia.php, czyli to samo, co w zakładce „wykaz”. 
-
  # usun_pokoj.php i usun_aparat.php - Również w tym przypadku strony te działają analogicznie do siebie. Przy pomocy trójstopniowej analizy zapytań SQL zostają wyświetlone odpowiednio pogrupowane aparatury występujące w odpowiednich pokojach na odpowiednich piętrach, lub po prostu wszystkie pokoje, wraz z wypisaną ilością narzędzi znajdujących się w danym pomieszczeniu. Jeżeli kasowany jest pokój, w którym zawarte są jakieś elementy to one również zostaną skasowane z bazy danych. Operacja kasowania, tak samo jak i dodawania opiera się na drodze: 
 PHP->JS->PHP-(aktualizacja danych)->PHP.
-
-
  # Blokada przed autonomicznym uruchamianiem stron - Każda ze stron (poza index.php) posiada na początku skrypt PHP
 <?php if(!isset($add_site)) 
 {header("Location: ../access_denied.php");}
 else{}?>
 Zmienna add_site zdefiniowana jest na stronie index.php. W przypadku próby otworzenia dowolnej ze stron poza nią spowoduje przejście do strony informującej o nieuprawnionym dostępie (access_denied.php).
-
-
  # Przyciski stosowane na stronie - Wszystkie przyciski, które są dostępne na tej stronie opierają się na blokach div, które otrzymały odpowiednie właściwości w CSS, takie jak zmiana kursora na pointer, oraz reakcję na naciśnięcie realizowaną przez JS.
-
  # style.css i anime.js - Oddzielnie zapisane pliki style.css i anime.js są zgodne z dobrą kulturą programistyczną, ułatwiającą analizę kodu oraz dostęp do potrzebnych danych. W trakcie pracy z CSS wykorzystane zostały ponadto takie tagi jak: 
 text-transform:lowercase;
 font-size: 75%;

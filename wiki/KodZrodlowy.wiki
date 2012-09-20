@@ -1,0 +1,22 @@
+#summary Opis kodu źródłowego
+
+=Kod źródłowy z repozytorium SVN:=
+
+ * BMS – klasa startowa
+
+ * DBConnection – klasa zawierająca obsługę mechanizmów związanych z bazą danych. Nawiązywana jest tu komunikacja z serwerem MySql. Sformułowane są tu również wszystkie niezbędne zapytania do bazy danych potrzebne do działania systemu decyzyjnego oraz do aktualizowania danych interfejsu WWW.
+
+ * GUI – klasa obsługująca interfejs użytkownika
+
+ * ModbusTCPConnection – klasa odpowiadająca za komunikację z komputerem NPE. Przekazywane są tu dane dotyczące temperatury, a także decyzje systemu diagnostycznego.
+
+ * Regula – obsługa pobierania reguł systemu decyzyjnego
+
+ * SD – oprócz obsługi reguł systemu wspomagania decyzji następuje tu kolejno: 
+   * Odczyt ilości czujników z bazy
+   * Odczyt temperatur z komputera NPE
+   * Pobranie reguł
+   * Podejmowanie decyzji
+   * Rozgłoszenie decyzji
+   * Zapis do bazy i wysłanie decyzji do komputera NPE
+

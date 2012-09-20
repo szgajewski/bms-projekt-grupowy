@@ -1,4 +1,4 @@
-#summary Opis platformy iMod
+#summary Platforma iMod
 
 = Platforma iMod =
 

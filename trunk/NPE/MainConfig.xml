@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<imod version="1.0.0" parameter-db="false" acquisition_period="120">
+
+ <group name="Definicje kanalow">  
+	
+	<access-channel name="Modbus">
+		<protocol name="MODBUS"/>
+		<port>"ET-502-TCP"</port>
+	</access-channel>
+	
+	<source-channel name="NPE_io">
+         <protocol name="HARDWARE"/>
+         <gap>0</gap>
+         <cycle>1</cycle>
+    </source-channel>
+
+	<source-channel name="OneWire">
+		<protocol name="ONEWIRE"/>
+
+		<port>"ET-0.0.0.0"</port>
+		<gap>0</gap>
+		<cycle>20</cycle>
+	</source-channel>
+	
+	
+	<message-channel name="Email_sender">
+		<protocol name="EMAIL">
+			<property name="user" value="npetest123"/>
+			<property name="password" value="npe123"/>
+		</protocol>
+		<port>"poczta.o2.pl"</port>
+		<recipient>"poczta.o2.pl"</recipient>
+	</message-channel>
+	
+	<!--<message-channel name="PSQL_Alarms">
+		<protocol name="SQL"/>
+		<port>"192.168.0.102:5432/baza_test"</port>
+		<property name="mode" value="direct"/>
+		<property name="driver" value="POSTGRESQL"/>
+		<property name="user" value="postgres"/>
+		<property name="password" value=""/>
+	</message-channel>-->
+	
+	
+	<message id="Alarm1">
+		<![CDATA[
+			"INSERT INTO alarmy (value, name, description, Date, time) VALUES ('REG_VALUE[THIS]', 'REG_NAME[THIS]', 'Temperatura w C', NOW(), NOW());"
+		]]>
+	</message>
+
+	<message id="Mess_1">
+		<![CDATA["Temperatura wyzsza niz 30!: REG_VALUE[THIS] REG_UNIT[THIS]"]]>
+	</message>
+
+	<message id="Mess_2">
+		<![CDATA["Temperatura nizsza niz 10!: REG_VALUE[THIS] REG_UNIT[THIS]"]]>
+	</message>
+	
+	<message id="Mess_4">
+		<![CDATA["Stała temperatura: REG_VALUE[THIS] REG_UNIT[THIS]"]]>
+	</message>
+
+	<message id="Mess_5">
+		<![CDATA["REG_NAME[THIS] zmieniła sie na wartosc: REG_VALUE[THIS] REG_UNIT[THIS]"]]>
+	</message>
+	
+	<parameter>
+		<id>"201"</id>
+		<source-channel channel-name="NPE_io" parameter-id="DO1" />
+		<access-channel channel-name="Modbus" parameter-id="101" />
+	</parameter>
+	
+	<parameter>
+		<id>"101"</id>
+		<source-channel channel-name="NPE_io" parameter-id="BUZZER" />
+		<access-channel channel-name="Modbus" parameter-id="201" />
+	</parameter>
+	
+	<parameter> 
+		<id>401</id> 
+		<source-channel channel-name="NPE_io" parameter-id="STATUS_LED">
+		</source-channel> 
+		<access-channel channel-name="Modbus" parameter-id="401" />                     
+	</parameter>
+	
+	<parameter> 
+		<id>402</id> 
+		<source-channel channel-name="NPE_io" parameter-id="USER_LED">
+		</source-channel> 
+		<access-channel channel-name="Modbus" parameter-id="402" />                     
+	</parameter>
+	
+	
+	
+	<parameter type="real32">
+		<id>"11000"</id>
+		<description>"Temp 1"</description>
+		<data-logging>true</data-logging>
+		<comment>"Sensor S1"</comment>
+		<unit>"°C"</unit>
+		
+		
+		<source-channel channel-name="OneWire" parameter-id="28F8869F030000:temperature11" />
+		<access-channel channel-name="Modbus" parameter-id="11000" />
+		
+		<event type="LoAlarm">
+			<message-channel channel-name="Email_sender"/>
+			<message-id>"Mess_2"</message-id>
+			<property name="trigger" value="10.0"/>
+		</event>
+		
+		<event type="HiAlarm">
+			<message-channel channel-name="Email_sender"/>
+			<message-id>"Mess_1"</message-id>
+			<property name="trigger" value="30.0"/>
+		</event>
+		
+		<event type="OnChange">
+			<message-channel channel-name="PSQL_Alarms"/>
+			<message-id>"Alarm1"</message-id>
+			<property name="trigger" value="0"/>
+		</event>
+		
+		<event type="NoChange">
+			<message-channel channel-name="PSQL_Alarms"/>
+			<message-id>"Alarm1"</message-id>
+			<property name="trigger" value="0"/>
+		</event>
+		
+	</parameter>
+	
+	<parameter type="real32">
+		<id>"11002"</id>
+		<description>"Temp 2"</description>
+		<data-logging>true</data-logging>
+		<comment>"Sensor S2"</comment>
+		<unit>"°C"</unit>
+		
+		
+		<source-channel channel-name="OneWire" parameter-id="28D9849F030000:temperature11" />
+		<access-channel channel-name="Modbus" parameter-id="11002" />
+		
+		<event type="LoAlarm">
+			<message-channel channel-name="Email_sender"/>
+			<message-id>"Mess_2"</message-id>
+			<property name="trigger" value="10.0"/>
+		</event>
+		
+		<event type="HiAlarm">
+			<message-channel channel-name="Email_sender"/>
+			<message-id>"Mess_1"</message-id>
+			<property name="trigger" value="30.0"/>
+		</event>
+		
+		<event type="OnChange">
+			<message-channel channel-name="PSQL_Alarms"/>
+			<message-id>"Alarm1"</message-id>
+			<property name="trigger" value="0"/>
+
+			<!--<message-channel channel-name="Email_sender"/>
+			<message-id>"Mess_5"</message-id>
+			<property name="trigger" value="1"/>-->
+		</event>
+		
+		<event type="NoChange">
+			<message-channel channel-name="PSQL_Alarms"/>
+			<message-id>"Alarm1"</message-id>
+			<property name="trigger" value="0"/>
+			
+			<!--<message-channel channel-name="Email_sender"/>
+			<message-id>"Mess_4"</message-id>-->
+		</event>
+		
+	</parameter>
+	
+
+</group>
+</imod>

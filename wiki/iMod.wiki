@@ -20,6 +20,11 @@ Ogólny schemat platformy iMod przedstawia poniższy rysunek:
 http://desmond.imageshack.us/Himg253/scaled.php?server=253&filename=channels2.jpg&res=landing
 
 
+Pliki konfiguracyjne platformy iMod znajdują się w odpowiednich kalatlogach:
+ * MainConfig.xml - /mnt/mtd/iMod/config
+ * sysconf - /mnt/mtd - plik ten odpowiada za opcje startowe urządzenia. Trzeba o nim szczególnie pamiętać podczas przenoszenia urządzenia do innej sieci, aby zmodyfikować ustawienia sieciowe
+ * rcs -  /mnt/mtd - określa jakie moduły systemu mają zostać uruchomione podczas startu urządzenia
+
 Więcej informacji na temat platformy iMod można znaleźć pod adresem:
 
  * http://www.a2s.pl/wprowadzenie-platformy-imod-a-2084.html
